@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KidMathCam - Aprende matemáticas con la cámara de tu iPhone. App educativa con IA que resuelve problemas matemáticos y proporciona explicaciones paso a paso.">
+    <meta name="keywords" content="matemáticas, educación, niños, app iOS, inteligencia artificial, OCR, resolver problemas">
+    <meta name="author" content="Alejandro Hernández Mitre">
+    <title>KidMathCam - Aprende Matemáticas con tu iPhone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">📐</span>
+                <span class="logo-text">KidMathCam</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#features">Características</a></li>
+                <li><a href="#how-it-works">Cómo Funciona</a></li>
+                <li><a href="#problems">Problemas</a></li>
+                <li><a href="#pricing">Precios</a></li>
+                <li><a href="support.html">Soporte</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-math">+</div>
+            <div class="floating-math">−</div>
+            <div class="floating-math">×</div>
+            <div class="floating-math">÷</div>
+            <div class="floating-math">π</div>
+            <div class="floating-math">√</div>
+            <div class="floating-math">=</div>
+            <div class="floating-math">∑</div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">KidMathCam</span>
+                </h1>
+                <p class="hero-tagline">Aprende matemáticas con la cámara de tu iPhone</p>
+                <p class="hero-description">
+                    Usa inteligencia artificial para resolver problemas matemáticos. 
+                    Toma una foto, obtén la solución paso a paso y aprende a tu ritmo.
+                </p>
+                <div class="hero-badges">
+                    <a href="#" class="app-store-badge">
+                        <svg viewBox="0 0 120 40" fill="currentColor">
+                            <path d="M110.135 0H9.535c-.367 0-.73 0-1.095.002-.306.002-.61.008-.919.013A13.215 13.215 0 0 0 5.517.19a6.665 6.665 0 0 0-1.9.627 6.438 6.438 0 0 0-1.62 1.18A6.258 6.258 0 0 0 .82 3.617a6.601 6.601 0 0 0-.625 1.903 12.993 12.993 0 0 0-.179 2.002c-.01.307-.01.615-.015.921V31.56c.005.31.006.61.015.921a12.992 12.992 0 0 0 .18 2.002 6.588 6.588 0 0 0 .624 1.905A6.208 6.208 0 0 0 1.998 38a6.274 6.274 0 0 0 1.618 1.179 6.7 6.7 0 0 0 1.901.63 13.455 13.455 0 0 0 2.004.177c.31.007.613.011.919.011.366.002.728.002 1.095.002h100.6c.36 0 .724 0 1.084-.002.304 0 .617-.004.922-.01a13.279 13.279 0 0 0 2-.178 6.804 6.804 0 0 0 1.908-.63A6.277 6.277 0 0 0 117.666 38a6.395 6.395 0 0 0 1.182-1.614 6.604 6.604 0 0 0 .619-1.905 13.506 13.506 0 0 0 .185-2.002c.004-.31.004-.61.004-.921.008-.364.008-.725.008-1.094V9.536c0-.366 0-.73-.008-1.092 0-.306 0-.614-.004-.92a13.507 13.507 0 0 0-.185-2.003 6.618 6.618 0 0 0-.62-1.903 6.466 6.466 0 0 0-2.798-2.8 6.768 6.768 0 0 0-1.908-.627 13.044 13.044 0 0 0-2-.176c-.305-.005-.618-.011-.922-.013-.36-.002-.725-.002-1.084-.002z"/>
+                        </svg>
+                        <div class="badge-content">
+                            <span class="badge-small">Descarga en el</span>
+                            <span class="badge-large">App Store</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6-18</span>
+                        <span class="stat-label">años</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">tipos de problemas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">idiomas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="app-preview">
+                            <div class="preview-header">
+                                <span class="preview-title">KidMathCam</span>
+                            </div>
+                            <div class="preview-camera">
+                                <div class="camera-frame">
+                                    <span class="math-problem">2x + 5 = 15</span>
+                                </div>
+                            </div>
+                            <div class="preview-solution">
+                                <span class="solution-label">Solución:</span>
+                                <span class="solution-text">x = 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Características Principales</h2>
+                <p class="section-subtitle">Todo lo que necesitas para aprender matemáticas de forma divertida</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">📷</div>
+                    <h3>Escaneo Inteligente</h3>
+                    <p>Captura problemas matemáticos con tu cámara. Reconocimiento automático de texto con Vision Framework de Apple.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Explicaciones Adaptativas</h3>
+                    <p>Explicaciones paso a paso personalizadas según la edad del estudiante (6-18 años).</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Niveles de Dificultad</h3>
+                    <p>Fácil, Medio y Difícil. Ajuste dinámico según el progreso del estudiante.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Práctica Personalizada</h3>
+                    <p>Genera problemas similares para practicar y refuerza conceptos con ejercicios adicionales.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Diseño Liquid Glass</h3>
+                    <p>Interfaz moderna estilo iOS 18 con efectos de glassmorphism y animaciones fluidas.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Privacidad Primero</h3>
+                    <p>Procesamiento en el dispositivo. Sin almacenamiento de imágenes en servidores externos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo Funciona?</h2>
+                <p class="section-subtitle">4 pasos simples para resolver cualquier problema</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📸</div>
+                    <h3>Toma una Foto</h3>
+                    <p>Captura el problema matemático de un libro, cuaderno o pizarra.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Reconocimiento Automático</h3>
+                    <p>La app identifica y extrae el problema matemático de la imagen.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">✨</div>
+                    <h3>Solución Paso a Paso</h3>
+                    <p>Obtén la solución completa con explicaciones adaptadas a tu edad.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Practica y Aprende</h3>
+                    <p>Resuelve problemas similares para reforzar lo aprendido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Types Section -->
+    <section id="problems" class="problem-types">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tipos de Problemas</h2>
+                <p class="section-subtitle">Soporte para una amplia variedad de problemas matemáticos</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">➕</div>
+                    <h3>Aritmética</h3>
+                    <p>Suma, resta, multiplicación y división</p>
+                    <div class="problem-example">25 + 47 = ?</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🍕</div>
+                    <h3>Fracciones</h3>
+                    <p>Operaciones con fracciones y decimales</p>
+                    <div class="problem-example">½ + ¼ = ?</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔢</div>
+                    <h3>Ecuaciones</h3>
+                    <p>Ecuaciones lineales y sistemas</p>
+                    <div class="problem-example">2x + 5 = 15</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📖</div>
+                    <h3>Problemas de Texto</h3>
+                    <p>Problemas escritos en palabras</p>
+                    <div class="problem-example">"Si Juan tiene 5 manzanas..."</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📐</div>
+                    <h3>Geometría</h3>
+                    <p>Áreas, perímetros y figuras</p>
+                    <div class="problem-example">A = π × r²</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔬</div>
+                    <h3>Álgebra</h3>
+                    <p>Expresiones algebraicas avanzadas</p>
+                    <div class="problem-example">(x + 2)² = ?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planes y Precios</h2>
+                <p class="section-subtitle">Comienza gratis y descubre todo el potencial</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Prueba Gratuita</h3>
+                        <div class="price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/ 7 días</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Acceso completo por 7 días</li>
+                        <li>✓ Todos los tipos de problemas</li>
+                        <li>✓ Explicaciones adaptativas</li>
+                        <li>✓ Práctica personalizada</li>
+                        <li>✓ Sin compromiso</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Comenzar Gratis</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Más Popular</div>
+                    <div class="pricing-header">
+                        <h3>Mensual</h3>
+                        <div class="price">
+                            <span class="price-amount">$4.99</span>
+                            <span class="price-period">/ mes</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Análisis ilimitados</li>
+                        <li>✓ Todos los tipos de problemas</li>
+                        <li>✓ Explicaciones adaptativas</li>
+                        <li>✓ Práctica personalizada</li>
+                        <li>✓ Soporte prioritario</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Suscribirse</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Anual</h3>
+                        <div class="price">
+                            <span class="price-amount">$29.99</span>
+                            <span class="price-period">/ año</span>
+                        </div>
+                        <span class="savings">Ahorra 50%</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Todo lo del plan mensual</li>
+                        <li>✓ 6 meses gratis</li>
+                        <li>✓ Acceso anticipado a novedades</li>
+                        <li>✓ Soporte VIP</li>
+                        <li>✓ Sin renovación automática</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Elegir Anual</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Nuestros Usuarios</h2>
+                <p class="section-subtitle">Familias que ya confían en KidMathCam</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Mi hijo de 10 años ahora le encanta hacer su tarea de matemáticas. Las explicaciones son perfectas para su edad."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <span class="author-name">María G.</span>
+                            <span class="author-role">Madre de familia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Como profesor, la recomiendo a mis estudiantes. Es una herramienta excelente para reforzar lo aprendido en clase."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🏫</div>
+                        <div class="author-info">
+                            <span class="author-name">Carlos R.</span>
+                            <span class="author-role">Profesor de Matemáticas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Increíble app! Me ayudó a entender álgebra de una manera que nunca había logrado antes."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👧</div>
+                        <div class="author-info">
+                            <span class="author-name">Ana L.</span>
+                            <span class="author-role">Estudiante, 15 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content glass-card">
+                <h2>¿Listo para Transformar el Aprendizaje?</h2>
+                <p>Descarga KidMathCam y comienza tu prueba gratuita de 7 días hoy</p>
+                <a href="#" class="btn btn-primary btn-large">
+                    <span>Descargar en App Store</span>
+                </a>
+                <p class="cta-disclaimer">Disponible para iOS 18.0 o superior • iPhone 12 o superior recomendado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📐</span>
+                        <span class="logo-text">KidMathCam</span>
+                    </div>
+                    <p class="footer-description">
+                        Aprende matemáticas de manera inteligente con la cámara de tu iPhone.
+                    </p>
+                    <div class="footer-languages">
+                        <span>🌍 Disponible en:</span>
+                        <span class="lang-badge">Español</span>
+                        <span class="lang-badge">English</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+                            <li><a href="terms.html">Términos de Servicio</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="support.html">Centro de Ayuda</a></li>
+                            <li><a href="mailto:bedr10_capacitacion@hotmail.com">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Desarrollador</h4>
+                        <ul>
+                            <li>Alejandro Hernández Mitre</li>
+                            <li><a href="mailto:bedr10_capacitacion@hotmail.com">bedr10_capacitacion@hotmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KidMathCam. Todos los derechos reservados.</p>
+                <p>Desarrollado por Alejandro Hernández Mitre</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

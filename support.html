@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Soporte de KidMathCam - Obtén ayuda, consulta preguntas frecuentes y contáctanos.">
+    <title>Soporte - KidMathCam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .support-page {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            background: var(--gradient-hero);
+        }
+
+        .support-header {
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        .support-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .support-header p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .faq-section {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(76, 127, 255, 0.1);
+        }
+
+        .faq-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 16px;
+        }
+
+        .contact-section {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(76, 127, 255, 0.1);
+        }
+
+        .contact-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            font-size: 28px;
+        }
+
+        .contact-details h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .contact-details p,
+        .contact-details a {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-blue);
+        }
+
+        .contact-form {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(76, 127, 255, 0.1);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+        }
+
+        .quick-help {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .quick-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(76, 127, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .quick-card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .quick-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .quick-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 968px) {
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-help {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">📐</span>
+                <span class="logo-text">KidMathCam</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">Características</a></li>
+                <li><a href="index.html#how-it-works">Cómo Funciona</a></li>
+                <li><a href="index.html#pricing">Precios</a></li>
+                <li><a href="support.html" class="active">Soporte</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Support Content -->
+    <section class="support-page">
+        <div class="container">
+            <div class="support-header">
+                <h1>Centro de Soporte</h1>
+                <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte. Consulta nuestras preguntas frecuentes o
+                    contáctanos directamente.</p>
+            </div>
+
+            <div class="support-grid">
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2>❓ Preguntas Frecuentes</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo funciona la prueba gratuita?</div>
+                        <div class="faq-answer">
+                            La prueba gratuita te da acceso completo a todas las funciones de KidMathCam durante 7 días.
+                            No se te cobrará hasta que termine el período de prueba. Puedes cancelar en cualquier
+                            momento antes de que finalice.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tipos de problemas puede resolver?</div>
+                        <div class="faq-answer">
+                            KidMathCam puede resolver aritmética básica (suma, resta, multiplicación, división),
+                            fracciones, ecuaciones lineales, problemas de texto, geometría (áreas y perímetros), y
+                            expresiones algebraicas. Estamos constantemente añadiendo más tipos de problemas.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Mis fotos se guardan en Internet?</div>
+                        <div class="faq-answer">
+                            No. Las imágenes que tomas se procesan localmente en tu dispositivo usando el Vision
+                            Framework de Apple. No almacenamos ni enviamos tus fotos a ningún servidor externo. Solo el
+                            texto del problema se procesa para generar la explicación.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo cancelo mi suscripción?</div>
+                        <div class="faq-answer">
+                            Puedes cancelar tu suscripción en cualquier momento a través de la App Store:<br><br>
+                            1. Abre Configuración en tu iPhone<br>
+                            2. Toca tu nombre > Suscripciones<br>
+                            3. Selecciona KidMathCam<br>
+                            4. Toca "Cancelar suscripción"<br><br>
+                            Seguirás teniendo acceso hasta el final del período actual.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Es seguro para niños?</div>
+                        <div class="faq-answer">
+                            Sí. KidMathCam está diseñada pensando en los niños. Cumplimos con COPPA (Ley de Protección
+                            de la Privacidad Infantil en Internet), no mostramos publicidad y el contenido es 100%
+                            educativo. Recomendamos supervisión parental para usuarios menores de 13 años.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿La app funciona sin Internet?</div>
+                        <div class="faq-answer">
+                            El escaneo y reconocimiento de texto funciona sin Internet gracias al procesamiento local.
+                            Sin embargo, para obtener las explicaciones paso a paso se requiere conexión a Internet, ya
+                            que utilizamos IA para generar respuestas personalizadas.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿En qué idiomas está disponible?</div>
+                        <div class="faq-answer">
+                            Actualmente KidMathCam está disponible en Español e Inglés. El idioma se ajusta
+                            automáticamente según la configuración de tu dispositivo. Estamos trabajando para añadir más
+                            idiomas en futuras actualizaciones.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-section">
+                    <h2>📧 Contáctanos</h2>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">👨‍💻</span>
+                            <div class="contact-details">
+                                <h4>Desarrollador</h4>
+                                <p>Alejandro Hernández Mitre</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div class="contact-details">
+                                <h4>Email de Soporte</h4>
+                                <a href="mailto:bedr10_capacitacion@hotmail.com">bedr10_capacitacion@hotmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div class="contact-details">
+                                <h4>Tiempo de Respuesta</h4>
+                                <p>Generalmente dentro de 24-48 horas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" placeholder="¿En qué podemos ayudarte?"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" placeholder="Describe tu pregunta o problema..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Help Cards -->
+            <div class="quick-help">
+                <div class="quick-card">
+                    <div class="quick-card-icon">📱</div>
+                    <h3>Requisitos del Sistema</h3>
+                    <p>iOS 18.0+, iPhone 12 o superior recomendado</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-card-icon">💳</div>
+                    <h3>Facturación</h3>
+                    <p>Gestionada a través de la App Store de Apple</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-card-icon">🔒</div>
+                    <h3>Privacidad</h3>
+                    <p>Consulta nuestra <a href="privacy-policy.html" style="color: var(--primary-blue);">Política de
+                            Privacidad</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📐</span>
+                        <span class="logo-text">KidMathCam</span>
+                    </div>
+                    <p class="footer-description">
+                        Aprende matemáticas de manera inteligente con la cámara de tu iPhone.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+                            <li><a href="terms.html">Términos de Servicio</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="support.html">Centro de Ayuda</a></li>
+                            <li><a href="mailto:bedr10_capacitacion@hotmail.com">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Desarrollador</h4>
+                        <ul>
+                            <li>Alejandro Hernández Mitre</li>
+                            <li><a href="mailto:bedr10_capacitacion@hotmail.com">bedr10_capacitacion@hotmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KidMathCam. Todos los derechos reservados.</p>
+                <p>Desarrollado por Alejandro Hernández Mitre</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
